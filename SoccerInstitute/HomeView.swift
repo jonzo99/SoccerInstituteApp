@@ -17,10 +17,7 @@ struct HomeView: View {
                     .padding(.top, 20)
                     .background(Color.gray)
                 CurrentDay
-                    .background(Color.gray)
-                    .cornerRadius(30)
                     .padding(.horizontal, 20)
-                    
                 
                 Grid() {
                     Spacer()
@@ -55,52 +52,29 @@ struct HomeView: View {
                                 .background(Color.pink)
                         }
                     }
-                    
                     Spacer()
                 }
             }
         }
     }
     
-    
-//    var CurrentDay: some View {
-//        VStack {
-//            HStack {
-//                Text("Today")
-//                    .padding(.leading, 20)
-//                Spacer()
-//            }
-//
-//            Text("Rest Day")
-//                .foregroundStyle(.blue)
-//        }
-//        .background(
-//            Image(.waterDrinker)
-//                .scaledToFill()
-//        )
-//        .background(Color.blue)
-//        .cornerRadius(30)
-//        .font(.title2)
-//    }
-    
     var CurrentDay: some View {
         ZStack {
             Image(.waterDrinker)
-                .scaledToFill()
+                .scaledToFit()
             
             VStack() {
                 HStack {
                     Text("Today")
-                       // .padding(.leading, 60)
+                        .padding(.leading, 20)
                     Spacer()
                 }
-                //Spacer()
-                
                 Text("Rest Day")
                     .foregroundStyle(.blue)
             }
         }
-        
+        .background(Color.gray)
+        .cornerRadius(30)
     }
     
     var HeaderView: some View {
