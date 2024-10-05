@@ -19,41 +19,38 @@ struct HomeView: View {
                 CurrentDay
                     .padding(.horizontal, 20)
                 
-                Grid() {
-                    Spacer()
-                    GridRow() {
+                Spacer()
+                VStack {
+                    HStack(spacing: 20) {
                         
-                        VStack {
-                            Text("Soccer1")
-                                .font(.title)
-                                .foregroundStyle(.blue)
-                                .background(Color.pink)
-                        }
-                        VStack {
-                            Text("Soccer2")
-                                .font(.title)
-                                .foregroundStyle(.blue)
-                                .background(Color.pink)
-                        }
-                       
+                        Text("Roster")
+                            .padding(.vertical, 40)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray)
+                            .cornerRadius(20)
+                        Text("Calander")
+                            .padding(.vertical, 40)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray)
+                            .cornerRadius(20)
                     }
-                    Divider()
-                    GridRow() {
-                        VStack {
-                            Text("Soccer3")
-                                .font(.title)
-                                .foregroundStyle(.blue)
-                                .background(Color.pink)
-                        }
-                        VStack {
-                            Text("Soccer4")
-                                .font(.title)
-                                .foregroundStyle(.blue)
-                                .background(Color.pink)
-                        }
+                    .padding(.horizontal, 20)
+                    HStack(spacing: 20) {
+                        Text("Training Plan")
+                            .padding(.vertical, 40)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray)
+                            .cornerRadius(20)
+                        
+                        Text("Tips")
+                            .padding(.vertical, 40)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray)
+                            .cornerRadius(20)
                     }
-                    Spacer()
+                    .padding(.horizontal, 20)
                 }
+                Spacer()
             }
         }
     }
